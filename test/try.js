@@ -37,4 +37,23 @@ describe('flat-try', () => {
             expect(returned).to.be.undefined
         })
     })
+
+    describe('apply', () => {
+        it("should return the function's returned value and no error", () => {
+            const sum = (a, b) => a + b
+            const [err, subject] = Try.apply(sum, 10, 32)
+
+            expect(err).to.be.null
+            expect(subject).to.eq(42)
+        })
+
+        it('should handle the exception', () => {
+            const exception = new Error()
+            const fn = (n) => { if (n > 10) { throw exception } }
+            const [err, returned] = Try.apply(fn, 42)
+
+            expect(err).to.eq(exception)
+            expect(returned).to.be.undefined
+        })
+    })
 })

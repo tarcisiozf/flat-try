@@ -26,6 +26,20 @@ if (err) {
 // use the result
 ```
 
+If you don't worry about the function context you don't need to wrap it with arrow functions, just use apply:
+
+```js
+const Try = require('flat-try')
+
+const [err, result] = Try.apply(myDangerousFunc, arg1, arg2, argN)
+
+if (err) {
+    // handle it
+}
+
+// use the result
+```
+
 **Promises/Async:**
 
 ```js
