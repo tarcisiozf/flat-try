@@ -1,14 +1,22 @@
 {
   "name": "flat-try",
   "version": "1.0.0",
-  "description": "",
+  "description": "try/catch without blocks",
   "main": "index.js",
   "scripts": {
     "test": "mocha test"
   },
-  "keywords": [],
+  "keywords": ["try","exceptions","errors"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarcisiozf/flat-try.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tarcisiozf/flat-try/issues"
+  },
+  "homepage": "https://github.com/tarcisiozf/flat-try#readme",
   "author": "Tarcisio Ferraz <github.com/tarcisiozf>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.0.0"
